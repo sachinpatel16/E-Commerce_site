@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Singup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+    <linkhref="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../static/CSS/login.css" />
+
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="login__container">
+      <div class="model">
+        <div class="login__left">
+          <img src="../static/assets/Collection banner (5).png" alt="model imageqq" />
+        </div>
+        <form action="{% url 'singup' %}" method="post" class="login__right">
+          {% csrf_token %}
+            <div class="login__right">
+              <h1>login</h1>
+              <div class="login__input">
+                  <label for="">Username</label>
+                  <input type="text" name="username" / required>
+
+                  <label for="">Email</label>
+                  <input type="email" name="email" / required>
+
+                  <label for="">password</label>
+                  <input type="password" name="password1" / required>
+
+                  <label for="">Conform password</label>
+                  <input type="password" name="password2" / required> 
+              </div>
+              <button type="submit" >Singup</button>
+              <p>already has account,<a href="{% url 'login' %}">Login</a></p>
+            </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

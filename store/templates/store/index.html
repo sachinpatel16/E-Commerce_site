@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    
+<style>
+      
+    @import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arvo", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    body {
+        width: 100%;
+        height: 100%;
+        font-weight: 100;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .nav__container {
+        width: 100%;
+        height: 68px;
+        border: 0 0 1px 0;
+        padding: 18px 32px 18px 32px;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */
+        /* position: fixed;
+        top: 0;
+        z-index: 100; */
+    }
+
+
+    .nav__items {
+        display: flex;
+        gap: 27px;
+        align-items: center;
+    }
+
+    .nav__logo h3 {
+        color: #000000;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    .nav__links ul {
+        display: flex;
+        gap: 16px;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    .nav__links ul li {
+        padding: 0 21px;
+    }
+
+    .nav__login{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav__login i {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        font-family: "Arvo", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.1rem;
+    }
+
+    .nav__login h5 a{
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .hero__section {
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        /* padding: 0 64px; */
+        z-index: 10;
+    }
+
+    .hero__section img {
+        width: 100%;
+        /* position: absolute; */
+        height: 712px;
+        z-index: -1;
+    }
+
+    .hero__text {
+        z-index: 10px;
+        position: absolute;
+        color: #ffffff;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 29px;
+        bottom: 20%;
+        left: 7%;
+        font-size: 1.5rem;
+    }
+
+    .hero__section-btn {
+        background-color: #fff;
+        color: #000000;
+        width: 50%;
+        padding: 9px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        margin-top: 15px;
+    }
+
+    .newcoming__section {
+        width: 100%;
+        padding: 32px;
+        letter-spacing: 1.5px;
+        line-height: 26px;
+    }
+
+    .product__cards {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 48px 0;
+    }
+
+
+
+    .model__section {
+        padding: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+
+    .art_section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 32px;
+        /* background-color: rgba(231, 217, 192, 0.221); */
+        background-color: rgb(157 153 146 / 9%);
+    }
+
+    .art__title {
+        margin-top: 96px;
+        font-size: 2rem;
+        margin-bottom: 47px;
+    }
+
+    .art__subtext {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .art__subtext:nth-child(5) {
+        margin-bottom: 180px;
+    }
+
+    .shopinsta__section {
+        padding: 32px;
+    }
+
+    .shop__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        padding: 16px;
+        margin-bottom: 48px;
+    }
+
+    .model__pic {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    footer {
+        /* background-color: rgba(231, 217, 192, 0.221); */
+        background-color: rgb(157 153 146 / 9%);
+    }
+
+    footer .footer__container {
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .footer__left {
+        display: flex;
+        justify-content: flex-start;
+        gap: 65px;
+        font-size: 0.9rem;
+        width: 60%;
+    }
+
+    .footer__link-title {
+        margin-bottom: 20px;
+        font-weight: 100;
+        opacity: 0.8;
+    }
+
+    .footer__links ul li {
+        list-style: none;
+    }
+
+    .footer__right {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 30%;
+        gap: 10px;
+    }
+
+    .footer__right input {
+        padding: 12px 176px 12px 14px;
+    }
+
+    .footer__right button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000;
+        color: #ffffff;
+        padding: 11px 18px;
+        width: 30%;
+    }
+
+    .footer__cein {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 42px;
+    }
+
+</style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav__container">
+        <div class="nav__items">
+          <div class="nav__logo">
+            <h3>CEIN.</h3>
+          </div>
+
+          <div class="nav__links">
+            <ul>
+              <li><a href="{% url 'store' %}">SHOPE</a></li>
+              <li>New Arrivles</li>
+              <li>Sales</li>
+              <li>Journel</li>
+            </ul>
+          </div>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="nav__login">
+          <i class="ri-user-fill">
+            <h5><a href="{% url 'login' %}">LOGOUT</a></h5>
+            <h5>| Welcome: {{user.username}}</h5>
+          </i>
+        </div>
+        {% else %}
+        <div class="nav__login">
+          <i class="ri-user-fill">
+            <h5><a href="{% url 'login' %}">LOGIN</a></h5>
+            <h5><a href="{% url 'singup' %}">SIGNUP</a></h5>
+          </i>
+        </div>
+        {% endif %}
+      </div>
+    </nav>
+
+    <div class="hero__section">
+      <img src="static/assets/content (1).png" alt="hero image" />
+      <!-- <img src="./assets/enhanced-image.png" alt="hero image" /> -->
+
+      <div class="hero__text">
+        Elevate Your Style
+        <br />
+        Timeless Fashion Sustainable
+        <br />
+        Choices
+
+        <div class="hero__section-btn"><a href="{% url 'store' %}">Shop Now</a></div>
+      </div>
+    </div>
+
+    <div class="newcoming__section">
+      Elevate your lifestyle with a more intelligent, superior wardrobe. <br />
+      Our range is crafted sustainably with longevity in mind.
+
+      <div class="product__cards">
+        <!-- <img src="./assets/Collection banner.png" alt="" />
+        <img src="./assets/Collection banner(2).png" alt="" />
+        <img src="./assets/Collection banner (3).png" alt="" /> -->
+
+
+        <img src="static/assets/IMG_3157.JPG" alt="" />
+        <img src="static/assets/IMG_3158.JPG" alt="" />
+        <img src="static/assets/IMG_3159.JPG" alt="" />
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="model__section">
+      <!-- <img src="./assets/Collection banner (4).png" alt="" />
+      <img src="./assets/Collection banner (5).png" alt="" /> -->
+
+      <img src="static/assets/IMG_3161.JPG" alt="" />
+      <img src="static/assets/IMG_3162.JPG" alt="" />
+    </div>
+
+    <div class="art_section">
+      <p class="art__title">The Art Of Fever, Better Choice</p>
+
+      <p class="art__subtext">
+        Opting for quality over quantity means selecting timeless, durable, and
+        responsibly
+      </p>
+      <p class="art__subtext">
+        made items. This approach simplifies our lives and fosters a deeper
+        appreciation for
+      </p>
+
+      <p class="art__subtext">
+        our surroundings. Emphasizing longevity and responsible production
+        resonates with
+      </p>
+      <p class="art__subtext">a more sustainable and mindful lifestyle.</p>
+    </div>
+
+    <div class="shopinsta__section">
+      <div class="shop__title">Shop Instagram</div>
+      <div class="model__pic">
+        <img src="static/assets//image.png" alt="" />
+        <img src="static/assets/image (1).png" alt="" />
+        <img src="static/assets/image (2).png" alt="" />
+        <img src="static/assets/image (3).png" alt="" />
+        <img src="static/assets/image (4).png" alt="" />
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer__container">
+        <div class="footer__left">
+          <div class="footer__links">
+            <div class="footer__link-title">CONTACT US</div>
+            <ul>
+              <li>+1(844) 326-6000</li>
+              <i>Email Us</i>
+              <li>Mon-Fri 9am-3pm PT</li>
+            </ul>
+          </div>
+          <div class="footer__links">
+            <div class="footer__link-title">CUSTOMERS</div>
+            <ul>
+              <li>Start a Return</li>
+              <i>Return Policy</i>
+              <li>FAQ</li>
+              <li>Catalogs and Mailers</li>
+              <li>About Group Gifting</li>
+            </ul>
+          </div>
+          <div class="footer__links">
+            <div class="footer__link-title">COMPANY</div>
+            <ul>
+              <li>About Us</li>
+              <i>Substainability</i>
+              <li>Discover Review</li>
+              <li>careers</li>
+              <li>Privacy Policy</li>
+              <li>Terms</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__right">
+          <div class="footer__right--title">Get the latest new from us</div>
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email adress"
+          />
+
+          <p>
+            By signing up you agree to <u>Privacy Policy</u> and
+            <u> Terms of Service.</u>
+          </p>
+
+          <button>Subscribe</button>
+        </div>
+      </div>
+
+      <div class="footer__cein">&copy;CEIN</div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
